@@ -24,15 +24,19 @@ console.log(adminData.products);  // Access shared array
 ## Q&A
 
 **Q: Why not use a global variable instead?**
+
 A: Global variables pollute the namespace and make dependencies unclear. Module exports make it explicit which data is shared and where it comes from.
 
 **Q: Can I use `module.exports` instead?**
+
 A: Yes. `module.exports = { routes: router, products }` works the same way.
 
 **Q: What happens when the server restarts?**
+
 A: All data is lost. For persistence, use a database (MongoDB, MySQL, etc.) or file storage.
 
 **Q: Are there other patterns to share data?**
+
 A: Yes:
 - **Database** - Best for production
 - **Singleton pattern** - Create a dedicated data store module
