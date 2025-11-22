@@ -42,3 +42,7 @@ A: Yes:
 - **Singleton pattern** - Create a dedicated data store module
 - **Dependency injection** - Pass data as function arguments
 - **Event emitter** - Publish/subscribe pattern
+
+---
+
+**Note:** There are various approaches to sharing data between modules. However, this in-memory approach does not persist data—it is lost when the server restarts. For real applications, a database (e.g., MongoDB, MySQL) is required to maintain data persistence.
